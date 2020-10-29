@@ -1,3 +1,24 @@
+%for multiple n values
+clc;
+clear all;
+close all;
+Fs = 800e3;
+dt = 1/Fs;
+n = 0: 1:5;
+t =  (0:dt:0.02-dt)';
+Fm = 100;
+y = cos(2*pi*Fm*t*n);
+figure;
+plot(t,y);
+figure;
+stem(y);
+%Ploting the Sampled Signal.
+figure(2); 
+stem(y);
+title('Sampled signal');
+xlabel('time');
+ylabel('amplitude');
+
 clc;
 clear all;
 close all;
